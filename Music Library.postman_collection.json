@@ -1,0 +1,842 @@
+{
+	"info": {
+		"_postman_id": "a29813ab-493d-496d-b729-b0876caee586",
+		"name": "Music Library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30982501",
+		"_collection_link": "https://velocity-8965.postman.co/workspace/Velocity-Workspace~61cec2b5-828c-427c-8a24-d21a2c65579f/collection/30982501-a29813ab-493d-496d-b729-b0876caee586?action=share&source=collection_link&creator=30982501"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"password\",\r\n    \"role\" : \"Admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTQ0OTBhMmFjYmNkMjQ2NGRhNTgyNiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzU3Njk4NCwiZXhwIjoxNzMzNTgwNTg0fQ.z69jw5PTW3ZhihaJMQ2H1s49MDV8NVNYda-CB0g141I",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTQ0NmZiYmMzZmQ5MjQzMGZhMmI5MSIsInJvbGUiOiJWaWV3ZXIiLCJpYXQiOjE3MzM1NzY1NjgsImV4cCI6MTczMzU4MDE2OH0.gBKvjH4ZjWJky2bMc-UqMwSAde3FDa0yLkk2R9lbLfI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/Logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"Logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTQ0OTBhMmFjYmNkMjQ2NGRhNTgyNiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzU3Njk4NCwiZXhwIjoxNzMzNTgwNTg0fQ.z69jw5PTW3ZhihaJMQ2H1s49MDV8NVNYda-CB0g141I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"viewer@gmail.com\",\r\n    \"password\": \"password\",\r\n    \"role\" : \"Viewer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/users/add-user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"add-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update password",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTQ0NmZiYmMzZmQ5MjQzMGZhMmI5MSIsInJvbGUiOiJWaWV3ZXIiLCJpYXQiOjE3MzM1Nzc3ODIsImV4cCI6MTczMzU4MTM4Mn0._s8wyORvfeV6NTAYMLbrK2OrtUdO7wYNLnceBYzfuNw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"old_password\": \"password\",\r\n \"new_password\": \"newPassword\"\r\n} \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/users/update-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"update-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTQ0OTBhMmFjYmNkMjQ2NGRhNTgyNiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzU3Njk4NCwiZXhwIjoxNzMzNTgwNTg0fQ.z69jw5PTW3ZhihaJMQ2H1s49MDV8NVNYda-CB0g141I",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/users/675446fbbc3fd92430fa2b91?",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"675446fbbc3fd92430fa2b91"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Artists",
+			"item": [
+				{
+					"name": "get all artists",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTQ0OTBhMmFjYmNkMjQ2NGRhNTgyNiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzU5Mzg1MywiZXhwIjoxNzMzNTk3NDUzfQ.k0ZBF4jXAJXdGlyOmdv012ota324iOUqaOSaGQnOL8E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/artists",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"artists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get artists by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTQ0OTBhMmFjYmNkMjQ2NGRhNTgyNiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzU5Mzg1MywiZXhwIjoxNzMzNTk3NDUzfQ.k0ZBF4jXAJXdGlyOmdv012ota324iOUqaOSaGQnOL8E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000 /artists/67548c844c92f5e3a120370c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000 ",
+							"path": [
+								"artists",
+								"67548c844c92f5e3a120370c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add artists",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTQ0OTBhMmFjYmNkMjQ2NGRhNTgyNiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzU5Mzg1MywiZXhwIjoxNzMzNTk3NDUzfQ.k0ZBF4jXAJXdGlyOmdv012ota324iOUqaOSaGQnOL8E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"name\": \"Ravi\",\r\n \"grammy\": true,\r\n \"hidden\": false\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/artists/add-artist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"artists",
+								"add-artist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update artists",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTQ0OTBhMmFjYmNkMjQ2NGRhNTgyNiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzU5Mzg1MywiZXhwIjoxNzMzNTk3NDUzfQ.k0ZBF4jXAJXdGlyOmdv012ota324iOUqaOSaGQnOL8E",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"name\": \"Eminem\",\r\n \"grammy\": true,\r\n \"hidden\": false\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/artists/67548c844c92f5e3a120370c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"artists",
+								"67548c844c92f5e3a120370c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete artist",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTQ0OTBhMmFjYmNkMjQ2NGRhNTgyNiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzU5Mzg1MywiZXhwIjoxNzMzNTk3NDUzfQ.k0ZBF4jXAJXdGlyOmdv012ota324iOUqaOSaGQnOL8E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/artists/67548eded145c719b7363c1f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"artists",
+								"67548eded145c719b7363c1f"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Albums",
+			"item": [
+				{
+					"name": "get all albums",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTQ0OTBhMmFjYmNkMjQ2NGRhNTgyNiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzU5Mzg1MywiZXhwIjoxNzMzNTk3NDUzfQ.k0ZBF4jXAJXdGlyOmdv012ota324iOUqaOSaGQnOL8E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/albums",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"albums"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get albums by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTQ0OTBhMmFjYmNkMjQ2NGRhNTgyNiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzU5Mzg1MywiZXhwIjoxNzMzNTk3NDUzfQ.k0ZBF4jXAJXdGlyOmdv012ota324iOUqaOSaGQnOL8E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/albums/67549137a21764fca30f8370",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"albums",
+								"67549137a21764fca30f8370"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add albums",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTQ0OTBhMmFjYmNkMjQ2NGRhNTgyNiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzU5Mzg1MywiZXhwIjoxNzMzNTk3NDUzfQ.k0ZBF4jXAJXdGlyOmdv012ota324iOUqaOSaGQnOL8E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"name\": \"testing\",\r\n \"year\": 2000,\r\n \"hidden\": false\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/albums/add-album",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"albums",
+								"add-album"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update albums",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTQ0OTBhMmFjYmNkMjQ2NGRhNTgyNiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzU5Mzg1MywiZXhwIjoxNzMzNTk3NDUzfQ.k0ZBF4jXAJXdGlyOmdv012ota324iOUqaOSaGQnOL8E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"name\": \"Marshall Mathers LP\",\r\n \"year\": 2020,\r\n \"hidden\": true\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/albums/67549137a21764fca30f8370",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"albums",
+								"67549137a21764fca30f8370"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete almum",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTQ0OTBhMmFjYmNkMjQ2NGRhNTgyNiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzU5Mzg1MywiZXhwIjoxNzMzNTk3NDUzfQ.k0ZBF4jXAJXdGlyOmdv012ota324iOUqaOSaGQnOL8E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/albums/675491d9a21764fca30f837c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"albums",
+								"675491d9a21764fca30f837c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tracks",
+			"item": [
+				{
+					"name": "get all tracks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTQ0OTBhMmFjYmNkMjQ2NGRhNTgyNiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzc1ODI3MiwiZXhwIjoxNzMzNzYxODcyfQ.IMlsn7GJ-mNYFKEd4o-03LsbL5BICfMRQ3OSoqYEm-c",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/tracks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"tracks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get tracks by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTQ0OTBhMmFjYmNkMjQ2NGRhNTgyNiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzc1ODI3MiwiZXhwIjoxNzMzNzYxODcyfQ.IMlsn7GJ-mNYFKEd4o-03LsbL5BICfMRQ3OSoqYEm-c",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/tracks/67570d59984fde45c5b279e7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"tracks",
+								"67570d59984fde45c5b279e7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add tracks",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTQ0OTBhMmFjYmNkMjQ2NGRhNTgyNiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzc1ODI3MiwiZXhwIjoxNzMzNzYxODcyfQ.IMlsn7GJ-mNYFKEd4o-03LsbL5BICfMRQ3OSoqYEm-c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"name\": \"Not Afraid\",\r\n \"duration\": 26,\r\n \"hidden\": true\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/tracks/add-track",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"tracks",
+								"add-track"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update track",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTQ0OTBhMmFjYmNkMjQ2NGRhNTgyNiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzc1ODI3MiwiZXhwIjoxNzMzNzYxODcyfQ.IMlsn7GJ-mNYFKEd4o-03LsbL5BICfMRQ3OSoqYEm-c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"name\": \"Afraid\",\r\n \"duration\": 263,\r\n \"hidden\": false\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/tracks/67570d59984fde45c5b279e7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"tracks",
+								"67570d59984fde45c5b279e7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete track",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTQ0OTBhMmFjYmNkMjQ2NGRhNTgyNiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzc1ODI3MiwiZXhwIjoxNzMzNzYxODcyfQ.IMlsn7GJ-mNYFKEd4o-03LsbL5BICfMRQ3OSoqYEm-c",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/tracks/67570d59984fde45c5b279e7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"tracks",
+								"67570d59984fde45c5b279e7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Favorites",
+			"item": [
+				{
+					"name": "add favorites",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTQ0OTBhMmFjYmNkMjQ2NGRhNTgyNiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzc1ODI3MiwiZXhwIjoxNzMzNzYxODcyfQ.IMlsn7GJ-mNYFKEd4o-03LsbL5BICfMRQ3OSoqYEm-c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"category\": \"artist\",\r\n \"user_id\": \"67570d59984fde45c5b279e7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/favorites/add-favorite",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"favorites",
+								"add-favorite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get favorites by category",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTQ0OTBhMmFjYmNkMjQ2NGRhNTgyNiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzc1ODI3MiwiZXhwIjoxNzMzNzYxODcyfQ.IMlsn7GJ-mNYFKEd4o-03LsbL5BICfMRQ3OSoqYEm-c",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/favorites/artist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"favorites",
+								"artist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove favorite",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTQ0OTBhMmFjYmNkMjQ2NGRhNTgyNiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzc1ODI3MiwiZXhwIjoxNzMzNzYxODcyfQ.IMlsn7GJ-mNYFKEd4o-03LsbL5BICfMRQ3OSoqYEm-c",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/favorites/remove-favorite/675710443d4e15455649aadd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"favorites",
+								"remove-favorite",
+								"675710443d4e15455649aadd"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
